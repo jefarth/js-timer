@@ -1,4 +1,4 @@
-const $timerDisplay = document.querySelector(".timerDisplay");
+const $timerDisplay = document.querySelector("#timerDisplay");
 const $timer = document.querySelector("#start");
 const $killTimer = document.querySelector("#stop");
 let count = 0;

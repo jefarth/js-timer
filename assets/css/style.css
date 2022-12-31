@@ -5,30 +5,34 @@ body {
     background-color: grey;
     
 }
-.box {
-    border: 1px solid black;
-    background-color: magenta;
-    margin: 20%;
-}
-.timerDisplay {
-    height: 50px;
-    width: auto;
-    margin: 10px;
-    text-align: center;
-}
 button {
     padding: 10px;
     margin: 10px;
-}
-#start {
-    background-color: green
-}
-#stop {
-    background-color: red;
 }
 h1 {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
+}
+.box {
+    border: 1px solid black;
+    background-color: magenta;
+    margin: 20%;
+}
+#timerDisplay {
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 30px;
+}
+#start {
+    background-color: green;
+}
+#stop {
+    background-color: red;
 }
