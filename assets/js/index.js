@@ -1,19 +1,24 @@
-var $timerDisplay = document.querySelector(".timerDisplay");
-var $timer = document.querySelector("#start");
-var $killTimer = document.querySelector("#stop");
-var count = 0;
+const $timerDisplay = document.querySelector(".timerDisplay");
+const $timer = document.querySelector("#start");
+const $killTimer = document.querySelector("#stop");
+let count = 0;
+
 function setTimer() {
-    timerInterval = setInterval(function() {
+    const timerInterval = setInterval(function() {
         count++;
         $timerDisplay.textContent = count;
     }, 1000);
+    function stopTimer() {
+        clearInterval(timerInterval);
+    }
+    $killTimer.addEventListener("click", function() {
+        stopTimer();
+        if ($timer.disabled === true) {
+            $timer.disabled = false;
+        }
+    });
 };
-function stopTimer() {
-    clearInterval(timerInterval);
-}
 $timer.addEventListener("click", function() {
     setTimer();
-});
-$killTimer.addEventListener("click", function() {
-    stopTimer();
+    $timer.disabled = true;
 });
